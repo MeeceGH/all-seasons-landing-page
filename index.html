@@ -11,13 +11,19 @@
 </head>
 <body>
     <header id="header">
-        <div class="logo"></div>
+        <img src="./Images/logo.png" alt="Logo" class="logo">
         <nav class="nav">
+            <div class="nav-search">
+                <input type="search" class="nav-search" placeholder="Search...">
+                <i class="fa fa-search"></i>
+            </div>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li class="nav-dropdown">
-                    <span>Shop</span>
+                    <a href="#">Shop</a>
+                    <button class="nav-btn-expand"><i class="fa fa-circle-arrow-right"></i></button>
                     <ul>
+                        <li class="collapse"><button class="btn"><i class="fa fa-circle-arrow-left"></i></button></li>
                         <li><a href="#">Popular</a></li>
                         <li><a href="#">Veggies</a></li>
                         <li><a href="#">Herbs</a></li>
@@ -25,7 +31,8 @@
                     </ul>
                 </li>
                 <li class="nav-dropdown">
-                    <span>Recipes</span>
+                    <a href="#">Recipes</a>
+                    <button class="nav-btn-expand"><i class="fa fa-circle-arrow-right"></i></button>
                     <ul>
                         <li><a href="#">Vegan</a></li>
                         <li><a href="#">Non-Vegan</a></li>
@@ -36,8 +43,13 @@
                 <li><a href="#">FAQ's</a></li>
             </ul>
         </nav>
-        <div class="cart-icon"><a href="#"></a></div>
-        <div class="nav-icon"><i class="fa fa-bars"></i></div>
+        <div class="header-icons">
+            <div class="cart-icon">
+                <a href="#">0</a>
+                <div class="cart-icon-top"></div>
+            </div>
+            <div class="nav-icon"><i class="fa fa-bars"></i></div>
+        </div>
     </header>
 
     <section id="banner">
