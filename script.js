@@ -8,6 +8,8 @@ const bannerCircles = document.querySelectorAll('#banner .circle-container .circ
 const bannerBoxes = document.querySelectorAll('#banner .banner-box-container .banner-box');
 const testimonyBoxes = document.querySelectorAll('#testimonials .testimony-box-container .testimony-box');
 const testimonyCircles = document.querySelectorAll('#testimonials .circle-container .circle');
+const navSearch = document.querySelector('#header .header-icons .nav-search');
+const searchGlass = document.querySelector('#header .header-icons .nav-search i');
 
 let bannerHovered = false;
 
@@ -29,12 +31,18 @@ navCollapse.forEach((el, idx) => {
     });
 });
 
+searchGlass.addEventListener('click', () => {
+    navSearch.classList.toggle('show');
+})
+
 window.addEventListener('resize', () => {
     if (window.innerWidth >= 1064) {
         nav.classList.remove('show');
         navExpand.forEach(el => {
             el.nextElementSibling.classList.remove('show');
         });
+    } else if (window.innerWidth < 1064) {
+        navSearch.classList.remove('show');
     };
 });
 
